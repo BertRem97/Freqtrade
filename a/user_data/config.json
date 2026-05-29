@@ -1,0 +1,120 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "max_open_trades": 3,
+  "stake_currency": "EUR",
+  "stake_amount": 100,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "EUR",
+  "timeframe": "15m",
+  "dry_run": true,
+  "db_url": "sqlite:///./user_data/ichiv1_A.sqlite",
+  "dry_run_wallet": 1000,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  
+  "entry_pricing": {
+    "price_side": "bid",
+    "use_order_book": false,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "ask",
+    "use_order_book": false,
+    "order_book_top": 1
+  },
+
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "market",
+    "force_entry": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+"exchange": {
+    "name": "kraken",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "LINK/EUR",
+      "STETH/EUR",
+      "BTC/EUR",
+      "SOL/EUR",
+      "LTC/EUR",
+      "STRK/EUR",
+      "ETH/EUR",
+      "LDO/EUR",
+      "STABLE/EUR",
+      "XPL/EUR",
+      "ENA/EUR",
+      "APT/EUR",
+      "PUMP/EUR",
+      "FHE/EUR",
+      "CC/EUR",
+      "ARB/EUR",
+      "UNI/EUR",
+      "TRX/EUR",
+      "TON/EUR",
+      "SKY/EUR",
+      "NIGHT/EUR",
+      "FLR/EUR",
+      "RENDER/EUR",
+      "IP/EUR",
+      "BAT/EUR",
+      "SAND/EUR",
+      "MOCA/EUR",
+      "ANKR/EUR",
+      "MEME/EUR",
+      "SSV/EUR"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "telegram": {
+    "enabled": true,
+    "token": "8524244567:AAHELLzdNnRPitVyj1Ak5HwbP7r18JVSHFI",
+    "chat_id": "6980285678"
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "eae05e336048e0d6be59d509ed5317428442550c74d0dc836ae143ea9827a2aa",
+    "ws_token": "46KVspOpVy_VvDJOE2Hp2FDUTWjUlEl5nA",
+    "CORS_origins": [],
+    "username": "freqtrader",
+    "password": "schrabbel10"
+  },
+  "bot_name": "freqtrade",
+  "strategy": "ichiV1_A",
+  "user_data_dir": "./user_data",
+  "strategy_path": "./user_data",
+  "initial_state": "running",
+  "force_entry_enable": false,
+  "internals": {
+    "process_throttle_secs": 5
+
+ }
+}
