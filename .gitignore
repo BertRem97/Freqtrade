@@ -9,6 +9,7 @@ env/
 
 # Freqtrade data
 user_data/data/
+user_data/
 user/data/logs/
 user_data/backtest_results/
 user_data/hyperopt/results/
