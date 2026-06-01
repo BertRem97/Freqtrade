@@ -18,25 +18,25 @@ class ichiV1_C(IStrategy):
     # NOTE: settings as of the 25th july 21
     # Buy hyperspace params:
     buy_params = {
-        "buy_trend_above_senkou_level": 1,
-        "buy_trend_bullish_level": 6,
-        "buy_fan_magnitude_shift_value": 3,
-        "buy_min_fan_magnitude_gain": 1.008 #1.002 NOTE: Good value (Win% ~70%), alot of trades
+        "buy_trend_above_senkou_level": 2,
+        "buy_trend_bullish_level": 4,
+        "buy_fan_magnitude_shift_value": 5,
+        "buy_min_fan_magnitude_gain": 1.004 #1.002 NOTE: Good value (Win% ~70%), alot of trades
         #"buy_min_fan_magnitude_gain": 1.008 # NOTE: Very save value (Win% ~90%), only the biggest moves 1.008,
     }
 
     # Sell hyperspace params:
     # NOTE: was 15m but kept bailing out in dryrun
     sell_params = {
-        "sell_trend_indicator": "trend_close_2h",
+        "sell_trend_indicator": "trend_close_15m",
     }
 
     # ROI table:
     minimal_roi = {
-        "0": 0.059,
-        "10": 0.037,
-        "41": 0.012,
-        "114": 0
+        "0": 0.298,
+        "38": 0.083,
+        "209": 0.051,
+        "328": 0
     }
 
     # Stoploss:
@@ -54,7 +54,7 @@ class ichiV1_C(IStrategy):
     #trailing_only_offset_is_reached = True
 
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     plot_config = {
